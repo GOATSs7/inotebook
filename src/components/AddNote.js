@@ -10,7 +10,6 @@ const AddNote = () => {
     e.preventDefault();
     addNote(note.title, note.description, note.tag);
   };
-
   const onChange = (e) => {
     setNote({ ...note, [e.target.name]: e.target.value });
   };
@@ -33,7 +32,7 @@ const AddNote = () => {
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="desc" className="form-label">
+            <label htmlFor="description" className="form-label">
               <h3>Description</h3>
             </label>
             <input
@@ -45,13 +44,14 @@ const AddNote = () => {
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="exampleInputPassword1" className="form-label">
+            <label htmlFor="tag" className="form-label">
               <h3>Tag</h3>
             </label>
             <input
               type="text"
               className="form-control"
-              id="exampleInputPassword1"
+              id="tag"
+              name="tag"
               onChange={onChange}
             />
           </div>
@@ -61,12 +61,11 @@ const AddNote = () => {
               className="btn btn-primary"
               onClick={handleclick}
             >
-              Submit
+              Add Note
             </button>
           </div>
         </form>
       </div>
-      ;
     </>
   );
 };
