@@ -3,7 +3,11 @@ import React from "react";
 const Alert = (props) => {
   return (
     <div>
-      <div className="alert alert-info" role="alert">
+      <div
+        className="alert alert-info"
+        style={{ marginTop: "57px" }}
+        role="alert"
+      >
         {props.message}
       </div>
     </div>
